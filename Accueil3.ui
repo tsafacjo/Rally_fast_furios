@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Fenetre</class>
+ <widget class="QWidget" name="Fenetre">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1050</width>
+    <height>890</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>9154</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/background/realracing3.jpg</normaloff>images/background/realracing3.jpg</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {background-color: rgb(104, 104, 104);
+
+}
+QPushButton {
+   /* background-color: beige;*/
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
+                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: red;
+    font: bold  30px;
+    min-width: 10em;
+    padding: 6px;
+}
+QPushButton:hover {
+
+    background-color:  rgb(104, 104, 104);
+color: beige;
+    border-style: inset;
+
+}
+QPushButton:pressed {
+
+    background-color:  rgb(104, 104, 104);
+color: beige;
+    border-style: inset;
+
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="waccueil">
+      <property name="styleSheet">
+       <string notr="true">/*background-image: url('Z:/python_worksapce/Rally_Breizh_Furious/images/background/realracing3.jpg');
+*/</string>
+      </property>
+      <widget class="QLabel" name="label_titre">
+       <property name="geometry">
+        <rect>
+         <x>-190</x>
+         <y>-30</y>
+         <width>1292</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Franklin Gothic Medium Cond</family>
+         <pointsize>26</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>_____________________** RALLY FAST FURIUS**__________________</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>130</y>
+         <width>1231</width>
+         <height>781</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>images/background/realracing3.jpg</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnOptions">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>410</y>
+         <width>579</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OPTIONS</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnQuitter">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>470</y>
+         <width>579</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>QUITTER</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnJouer">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>340</y>
+         <width>571</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>JOUER</string>
+       </property>
+      </widget>
+      <zorder>label</zorder>
+      <zorder>btnOptions</zorder>
+      <zorder>btnQuitter</zorder>
+      <zorder>label_titre</zorder>
+      <zorder>btnJouer</zorder>
+     </widget>
+     <widget class="QWidget" name="joueurs">
+      <widget class="QPushButton" name="btnJoueurs">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>340</y>
+         <width>571</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1 JOUEUR</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btonChoixOrdianateurs">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>490</y>
+         <width>571</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ORDINATEURS</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>-250</x>
+         <y>20</y>
+         <width>1181</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Franklin Gothic Medium</family>
+         <pointsize>26</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>_____________________** RALLY FAST FURIUS**__________________</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelbackground2">
+       <property name="geometry">
+        <rect>
+         <x>-30</x>
+         <y>140</y>
+         <width>1401</width>
+         <height>781</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>images/background/realracing3.jpg</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>420</y>
+         <width>571</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>2 Joueurs</string>
+       </property>
+      </widget>
+      <zorder>labelbackground2</zorder>
+      <zorder>btnJoueurs</zorder>
+      <zorder>btonChoixOrdianateurs</zorder>
+      <zorder>label_2</zorder>
+      <zorder>pushButton_2</zorder>
+     </widget>
+     <widget class="QWidget" name="voitures">
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>70</y>
+         <width>1244</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Franklin Gothic Medium Cond</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>CHOISISSEZ VOTRE CAR </string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnSuivant">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>820</y>
+         <width>461</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>SUIVANT &gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnPrecedent">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>820</y>
+         <width>496</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt; PRECEDENT</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>680</x>
+         <y>200</y>
+         <width>761</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Franklin Gothic Medium Cond</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>VITESSE MAX:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>310</y>
+         <width>761</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Franklin Gothic Medium Cond</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>RESERVOIR:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>870</x>
+         <y>200</y>
+         <width>761</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Franklin Gothic Medium Cond</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>200km/h</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>870</x>
+         <y>310</y>
+         <width>761</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Franklin Gothic Medium Cond</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>100L</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>300</y>
+         <width>201</width>
+         <height>331</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>images/car/v7.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="circuits">
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>80</y>
+         <width>1244</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Franklin Gothic Medium Cond</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>CHOISISSEZ VOTRE CIRCUIT</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnSuivantCircuit">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>810</y>
+         <width>496</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>SUIVANT &gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnPrecedentCircuit">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>810</y>
+         <width>496</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt; PRECEDENT</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>230</y>
+         <width>601</width>
+         <height>291</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>images/motifs/road_bent.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="stackedWidgetPage4">
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>70</y>
+         <width>1244</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Franklin Gothic Medium Cond</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>MEILLEUR SCORE</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="wjeu">
+      <layout class="QVBoxLayout" name="verticalLayout_4"/>
+     </widget>
+     <widget class="QWidget" name="wclassement">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>1280</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Franklin Gothic Medium Cond</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <property name="text">
+        <string>Classement </string>
+       </property>
+      </widget>
+      <widget class="QListView" name="listClassement">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>971</width>
+         <height>721</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnMenu">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>830</y>
+         <width>570</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Menu</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="stackedWidgetPage7">
+      <layout class="QVBoxLayout" name="verticalLayout_3"/>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnQuitter</sender>
+   <signal>clicked()</signal>
+   <receiver>Fenetre</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>509</x>
+     <y>872</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>656</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

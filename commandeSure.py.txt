@@ -1,0 +1,1 @@
+PYUIC4 Z:\python_worksapce\Rally_Breizh_Furious\accueil2.ui -x > Z:\python_worksapce\Rally_Breizh_Furious\Fenetre.py 
